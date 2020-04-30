@@ -1,0 +1,62 @@
+{
+  "groups": [
+    {
+      "name": "starter.okhttps",
+      "type": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties"
+    },
+    {
+      "name": "starter.okhttps.pool",
+      "type": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties$Pool",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties",
+      "sourceMethod": "getPool()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "starter.okhttps.connectTimeout",
+      "type": "java.time.Duration",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties"
+    },
+    {
+      "name": "starter.okhttps.readTimeout",
+      "type": "java.time.Duration",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties"
+    },
+    {
+      "name": "starter.okhttps.writeTimeout",
+      "type": "java.time.Duration",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties"
+    },
+    {
+      "name": "starter.okhttps.maxIdle",
+      "type": "java.lang.Integer",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties"
+    },
+    {
+      "name": "starter.okhttps.keepAliveDuration",
+      "type": "java.time.Duration",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties"
+    },
+    {
+      "name": "starter.okhttps.baseUrl",
+      "type": "java.lang.String",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties"
+    },
+    {
+      "name": "starter.okhttps.pool.maxIdleConnections",
+      "type": "java.lang.Integer",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties$Pool"
+    },
+    {
+      "name": "starter.okhttps.pool.keepAliveDuration",
+      "type": "java.lang.Long",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties$Pool"
+    },
+    {
+      "name": "starter.okhttps.pool.timeUnit",
+      "type": "java.util.concurrent.TimeUnit",
+      "sourceType": "com.qingbeijy.okhttps.starter.prop.OkHttpsProperties$Pool"
+    }
+  ]
+}
