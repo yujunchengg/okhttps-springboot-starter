@@ -15,7 +15,7 @@ springboot+okhttp
     具体使用详情如下:
     ```
     <dependency>
-        <groupId>com.qingbeijy</groupId>
+        <groupId>io.github.yujunchengg</groupId>
         <artifactId>okhttps-springboot-starter</artifactId>
         <version>1.0</version>
     </dependency>
