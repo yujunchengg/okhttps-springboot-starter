@@ -1,14 +1,14 @@
-package com.qingbeijy.okhttps.starter.config;
+package io.github.yujunchengg.okhttps.starter.config;
 
 import com.ejlchina.okhttps.HTTP;
 import com.ejlchina.okhttps.internal.HttpClient;
 import com.google.common.base.Strings;
-import com.qingbeijy.okhttps.starter.prop.OkHttpsProperties;
-import com.qingbeijy.okhttps.starter.template.async.AsyncGetTemplate;
-import com.qingbeijy.okhttps.starter.template.sync.DeleteTemplate;
-import com.qingbeijy.okhttps.starter.template.sync.GetTemplate;
-import com.qingbeijy.okhttps.starter.template.sync.PostTemplate;
-import com.qingbeijy.okhttps.starter.template.sync.PutTemplate;
+import io.github.yujunchengg.okhttps.starter.prop.OkHttpsProperties;
+import io.github.yujunchengg.okhttps.starter.template.async.AsyncGetTemplate;
+import io.github.yujunchengg.okhttps.starter.template.sync.DeleteTemplate;
+import io.github.yujunchengg.okhttps.starter.template.sync.GetTemplate;
+import io.github.yujunchengg.okhttps.starter.template.sync.PostTemplate;
+import io.github.yujunchengg.okhttps.starter.template.sync.PutTemplate;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.ConnectionPool;
 import okhttp3.Interceptor;

@@ -1,4 +1,4 @@
-package com.qingbeijy.okhttps.starter.prop;
+package io.github.yujunchengg.okhttps.starter.prop;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

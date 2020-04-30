@@ -1,4 +1,4 @@
-package com.qingbeijy.okhttps.starter.template.sync;
+package io.github.yujunchengg.okhttps.starter.template.sync;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

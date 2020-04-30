@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.qingbeijy.okhttps.starter.config.OkhttpsAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=io.github.yujunchengg.okhttps.starter.config.OkhttpsAutoConfiguration

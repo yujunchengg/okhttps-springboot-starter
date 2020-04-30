@@ -1,4 +1,4 @@
-package com.qingbeijy.okhttps.starter.template.async.callback;
+package io.github.yujunchengg.okhttps.starter.template.async.callback;
 
 import com.ejlchina.okhttps.HttpResult;
 import com.ejlchina.okhttps.OnCallback;

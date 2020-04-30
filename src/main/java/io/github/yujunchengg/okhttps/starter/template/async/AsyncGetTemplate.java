@@ -1,9 +1,9 @@
-package com.qingbeijy.okhttps.starter.template.async;
+package io.github.yujunchengg.okhttps.starter.template.async;
 
 import com.ejlchina.okhttps.HttpCall;
-import com.qingbeijy.okhttps.starter.template.async.callback.OnCompleteCallback;
-import com.qingbeijy.okhttps.starter.template.async.callback.OnExceptionCallback;
-import com.qingbeijy.okhttps.starter.template.async.callback.OnResponseCallback;
+import io.github.yujunchengg.okhttps.starter.template.async.callback.OnCompleteCallback;
+import io.github.yujunchengg.okhttps.starter.template.async.callback.OnExceptionCallback;
+import io.github.yujunchengg.okhttps.starter.template.async.callback.OnResponseCallback;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +23,7 @@ public class AsyncGetTemplate extends BaseTemplate{
      * @param onResponseCallback
      * @return
      */
-    public HttpCall getWithPathParam(String url,Map<String,?> pathParams,OnResponseCallback onResponseCallback){
+    public HttpCall getWithPathParam(String url, Map<String,?> pathParams, OnResponseCallback onResponseCallback){
         return getWithPathParam(url,pathParams,onResponseCallback,null);
     }
     /**
