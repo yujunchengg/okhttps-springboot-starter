@@ -6,11 +6,6 @@ import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
-
-
-/**
- * okhttps组件配置参数文件
- */
 @Component
 @ConfigurationProperties(prefix = "starter.okhttps")
 @Data
@@ -22,9 +17,6 @@ public class OkHttpsProperties {
     private Integer maxIdle=100;
     private String baseUrl;
     private Pool pool=new Pool();
-    /**
-     * 连接池参数实体
-     */
     @Data
     public static class Pool{
         private int maxIdleConnections=5;

@@ -17,16 +17,7 @@ public abstract class BaseTemplate {
 
     @Autowired
     protected HTTP http;
-    /**
-     * 获取HttpCall异步实例
-     * @param url
-     * @param headers
-     * @param pathParams
-     * @param urlParams
-     * @param onResponseCallback
-     * @param onExceptionCallback
-     * @param onCompleteCallback
-     */
+
     protected HttpCall get(String url, Map<String,String> headers, Map<String,?> pathParams, Map<String,?> urlParams, OnResponseCallback onResponseCallback, OnExceptionCallback onExceptionCallback, OnCompleteCallback onCompleteCallback){
         if(Strings.isNullOrEmpty(url)){
             return null;
@@ -52,14 +43,6 @@ public abstract class BaseTemplate {
         }
         return async.nothrow().get();
     }
-    /**
-     * 获取HttpCall异步实例
-     * @param url
-     * @param headers
-     * @param onResponseCallback
-     * @param onExceptionCallback
-     * @param onCompleteCallback
-     */
     protected HttpCall postJson(String url,Map<String,String> headers,Object jsonParam,OnResponseCallback onResponseCallback, OnExceptionCallback onExceptionCallback, OnCompleteCallback onCompleteCallback){
         if(Strings.isNullOrEmpty(url)){
             return null;

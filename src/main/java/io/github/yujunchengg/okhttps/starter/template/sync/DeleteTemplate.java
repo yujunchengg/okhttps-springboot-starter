@@ -11,48 +11,20 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Map;
 
-/**
- * okhttps封装的delete请求模板
- */
 @Component
 @Slf4j
 public class DeleteTemplate extends BaseTemplate {
     @Autowired
     private HTTP http;
-    /**
-     * 发送普通form表单请求
-     * @param url                  请求url
-     * @return
-     */
     public String deleteForm(String url){
         return deleteForm(url,null);
     }
-    /**
-     * 发送普通form表单请求
-     * @param url                   请求url
-     * @param headers               请求头参数信息
-     * @return
-     */
     public String deleteForm(String url,Map<String,String> headers){
         return deleteForm(url,headers,null);
     }
-    /**
-     * 发送普通form表单请求
-     * @param url                   请求url
-     * @param headers               请求头参数
-     * @param formData              请求体参数,标准的java bean
-     * @return
-     */
     public String deleteForm(String url,Map<String,String> headers,Object formData){
         return deleteForm(url,headers, BeanUtil.objToMap(formData));
     }
-    /**
-     * 发送普通form表单请求
-     * @param url                   请求url
-     * @param headers               请求头参数
-     * @param bodyParams            请求体参数(普通form表单形式)以表单key=value&的形式放在报文体内
-     * @return
-     */
     public String deleteForm(String url,Map<String,String> headers,Map<String,?> bodyParams){
         SyncHttpTask sync = bodyParamTask(url, headers,bodyParams);
         return null!=sync?responseText(sync.nothrow().delete()):null;
@@ -81,13 +53,6 @@ public class DeleteTemplate extends BaseTemplate {
         SyncHttpTask sync = jsonParamTask(url, headers,jsonParams,dateFormat);
         return null!=sync?responseText(sync.nothrow().delete()):null;
     }
-    /**
-     * 获取一个同步的http任务
-     * @param url
-     * @param headers
-     * @param bodyParams
-     * @return
-     */
     private SyncHttpTask bodyParamTask(String url, Map<String,String> headers, Map<String,?> bodyParams) {
         if(Strings.isNullOrEmpty(url)){
             return null;
@@ -101,13 +66,6 @@ public class DeleteTemplate extends BaseTemplate {
         }
         return sync;
     }
-    /**
-     * 构建一个同步的传递json参数的HttpTask类的实例
-     * @param url
-     * @param headers
-     * @param jsonParams
-     * @return
-     */
     private SyncHttpTask jsonParamTask(String url, Map<String,String> headers, Map<String,?> jsonParams) {
         if(Strings.isNullOrEmpty(url)){
             return null;

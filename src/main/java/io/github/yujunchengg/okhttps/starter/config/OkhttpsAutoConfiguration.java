@@ -21,9 +21,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-/*
- * okhttp组件自动配置
- */
 @Configuration
 @EnableConfigurationProperties(OkHttpsProperties.class)
 @ConditionalOnClass({GetTemplate.class, PostTemplate.class})
@@ -43,24 +40,18 @@ public class OkhttpsAutoConfiguration {
         }
         HTTP http= builder1
                 .config((Builder builder)->{
-                    //配置连接池,默认最大空闲连接为5,
                     builder.connectionPool(
                             new ConnectionPool(
                                     okHttpsProperties.getPool().getMaxIdleConnections(),
                                     okHttpsProperties.getPool().getKeepAliveDuration(),
                                     okHttpsProperties.getPool().getTimeUnit()
                             ));
-                    //配置连接超时时间（默认10秒）
                     builder.connectTimeout(okHttpsProperties.getConnectTimeout());
-                    //配置读取数据超时时间
                     builder.readTimeout(okHttpsProperties.getReadTimeout());
-                    // 配置拦截器
                     builder.addInterceptor((Interceptor.Chain chain) -> {
                         Request request = chain.request();
-                        // 必须同步返回，拦截器内无法执行异步操作
                         return chain.proceed(request);
                     });
-                    // 其它配置: CookieJar、SSL、缓存、代理、事件监听...
                 }).build();
         return http;
     }
