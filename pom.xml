@@ -20,7 +20,7 @@
         </plugins>
     </build>
     <properties>
-        <springboot.version>2.2.5.RELEASE</springboot.version>
+        <springboot.version>2.5.15</springboot.version>
         <springboot.version>2.2.5.RELEASE</springboot.version>
         <lombok.version>1.16.18</lombok.version>
         <slf4j-api.version>1.7.26</slf4j-api.version>
